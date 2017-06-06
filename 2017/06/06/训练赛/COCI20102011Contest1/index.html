@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>COCI2010/2011 Contest#1 | Shying&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言要不是算法多学了一点，差点被学弟学妹虐了… 话说这一次我应该算是真的理解$CDQ$分治是怎么一回事了。">
+<meta name="keywords" content="在线赛 COCI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="COCI2010&#x2F;2011 Contest#1">
+<meta property="og:url" content="http://yoursite.com/2017/06/06/训练赛/COCI20102011Contest1/index.html">
+<meta property="og:site_name" content="Shying&#39;s Blog">
+<meta property="og:description" content="前言要不是算法多学了一点，差点被学弟学妹虐了… 话说这一次我应该算是真的理解$CDQ$分治是怎么一回事了。">
+<meta property="og:updated_time" content="2017-06-06T00:40:39.585Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="COCI2010&#x2F;2011 Contest#1">
+<meta name="twitter:description" content="前言要不是算法多学了一点，差点被学弟学妹虐了… 话说这一次我应该算是真的理解$CDQ$分治是怎么一回事了。">
+  
+    <link rel="alternative" href="/atom.xml" title="Shying&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/uploads/kanade.ico">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/uploads/kanade.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Shying</a></h1>
+        </hgroup>
+        
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/AC自动机-模板/" style="font-size: 10px;">AC自动机 模板</a> <a href="/tags/DP-背包/" style="font-size: 10px;">DP 背包</a> <a href="/tags/math/" style="font-size: 10px;">math</a> <a href="/tags/在线赛-COCI/" style="font-size: 20px;">在线赛 COCI</a> <a href="/tags/斜率优化-CDQ分治/" style="font-size: 10px;">斜率优化 CDQ分治</a> <a href="/tags/线段树合并/" style="font-size: 10px;">线段树合并</a> <a href="/tags/组队赛-APIO/" style="font-size: 10px;">组队赛 APIO</a>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">懒</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Shying</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/uploads/kanade.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Shying</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-训练赛/COCI20102011Contest1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/06/06/训练赛/COCI20102011Contest1/" class="article-date">
+      <time datetime="2017-06-06T02:18:16.011Z" itemprop="datePublished">2017-06-06</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      COCI2010/2011 Contest#1
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/在线赛-COCI/">在线赛 COCI</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>要不是算法多学了一点，差点被学弟学妹虐了…</p>
+<p>话说这一次我应该算是真的理解$CDQ$分治是怎么一回事了。</p>
+<a id="more"></a>
+<h2 id="TaskC：幸运47"><a href="#TaskC：幸运47" class="headerlink" title="TaskC：幸运47"></a>TaskC：幸运47</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>如果一个数字只包含4和7，那么它就是幸运数字。</p>
+<p>求第$K$大的幸运数字。</p>
+<p>$1&lt;=K&lt;=10^5$</p>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>应该是可以感觉到这个和二进制数是非常相像的，但是又不完全一样。</p>
+<p>因为$0001==001$但是$4447!=447$。不过其实也不不是很困难。</p>
+<p>只要模拟几个数大概就可以发现了，如果只有一位，可以表示$2^1$个数，两位就是$2^2$个，$n$位就是$2^n$。</p>
+<p>对于一个$k$，需要减掉$2^1+2^2+….2^n$并且其差值小于等于$2^{n+1}$，然后通过二进制分解一下即可。</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int n;</div><div class="line">int A[20];</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	scanf(&quot;%d&quot;,&amp;n);</div><div class="line">	int t=0;</div><div class="line">	for(int i=0;;i++)&#123;</div><div class="line">		t=i;</div><div class="line">		if(n&gt;=1&lt;&lt;i)n-=1&lt;&lt;i;</div><div class="line">		else break;</div><div class="line">	&#125;</div><div class="line">	int k=0;</div><div class="line">	while(n&gt;0)&#123;</div><div class="line">		A[++k]=n&amp;1;</div><div class="line">		n=n&gt;&gt;1;</div><div class="line">	&#125;</div><div class="line">	for(int i=t;i&gt;=1;i--)</div><div class="line">		if(A[i]==1)printf(&quot;7&quot;);</div><div class="line">		else printf(&quot;4&quot;);</div><div class="line">	puts(&quot;&quot;);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="TaskD：发糖"><a href="#TaskD：发糖" class="headerlink" title="TaskD：发糖"></a>TaskD：发糖</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>有$N$个小孩，他们每个人需要$A_i$个糖，如果最后他拿到$x(x＜A_i)$个糖，他就会产生$(Ai-x)^2$的郁闷值。</p>
+<p>现在有$M$个糖果，求如何使得郁闷值最小。</p>
+<p>$0&lt;=M,A_i&lt;=10^9,1&lt;=N&lt;=10^5$</p>
+<p>保证最终答案在$longlong$范围内。</p>
+<h3 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h3><p>证明一个结论：</p>
+<p>最后所有小孩剩下糖果的最大值必须越小越好。</p>
+<p>假设这个结论不成立，那么有小孩的最终预期比最优情况大，有小孩比最终预期小。</p>
+<p>容易知道：<br>$$<br>a&gt;b—&gt;a^2-(a-1)^2&gt;b^2-(b-1)^2<br>$$<br>把最大的继续往下减才是较优的操作。</p>
+<p>因此不是最优的。</p>
+<p>所以，把小孩拥有的糖果数排序，把最大的变的尽量小。</p>
+<p>最后还剩下几个糖果不足以把最大值再下降的时候，再把剩下的糖果分给拥有最多糖果的那几个人，每人一个，分完为止。这里的证明可以参照上面。</p>
+<h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">#define M 100005</div><div class="line"></div><div class="line">int n,m;</div><div class="line">int A[M];</div><div class="line">long long ans,sum;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	scanf(&quot;%d %d&quot;,&amp;m,&amp;n);</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		scanf(&quot;%d&quot;,&amp;A[i]),sum+=A[i];</div><div class="line">	if(sum&lt;=m)&#123;puts(&quot;0&quot;);return 0;&#125;</div><div class="line">	sort(A+1,A+n+1);</div><div class="line">	int las=m,p=n;</div><div class="line">	for(int i=n;i&gt;=1;i--)&#123;</div><div class="line">		while(A[i]&gt;A[i-1]&amp;&amp;las&gt;=n-i+1)&#123;</div><div class="line">			A[i]--;</div><div class="line">			las-=n-i+1;</div><div class="line">			p=i;</div><div class="line">		&#125;</div><div class="line">		if(las==0)break;</div><div class="line">	&#125;</div><div class="line">	for(int i=p+1;i&lt;=n;i++)</div><div class="line">		if(i&gt;1)A[i]=min(A[i],A[i-1]);</div><div class="line">	for(int i=n;i&gt;=1;i--)&#123;</div><div class="line">		if(las)A[i]--,las--;</div><div class="line">		ans+=1ll*A[i]*A[i];</div><div class="line">	&#125;</div><div class="line">	cout&lt;&lt;ans&lt;&lt;endl;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h3><p>当我们发现具体的策略或者是构造办法的话有困难的话，往往还是要从题目最基础的性质开始想起。事实上这道题我是先写$AC$了才去想为什么的，说明这道题本身的性质并不是很难想或者难写，懵逼的原因只是我一直没有推题目性质的习惯，几乎是只靠猛想。这是一个很大的缺点。</p>
+<h2 id="TaskE：序列操作"><a href="#TaskE：序列操作" class="headerlink" title="TaskE：序列操作"></a>TaskE：序列操作</h2><h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>给定一个长度为$n$的序列$A$，目标是把$A$变成$B$。</p>
+<p>每次操作，可以选择把$A$中的一段区间+1或者-1。</p>
+<p>求最少的操作次数。</p>
+<p>$1&lt;=n&lt;=10^3,0&lt;=A_i,B_i,&lt;=80$</p>
+<h3 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h3><p>题目数据范围不大，乍一看还以为是什么很难的$dp$<del>然而正解的确是的</del>。</p>
+<p>然而并没有。</p>
+<p>可以首先把$A_i-B_i$构造成一个新的数组，定义为$C$。</p>
+<p>然后，在$C$这个数组中，有正有负，我们的任务是把$C$数组归零。</p>
+<p>这道题唯一的变数就是，我们可以同时对一段区间进行加减，那么每次区间的选取有什么要求呢？可以发现，当对负数进行操作的时候，肯定是要把负数加一，如果掺入了正数，其实是得不偿失的，因为我们肯定还需要把这个加过的正数减回来。同理，对正数操作的时候也是一样的。</p>
+<p>那么其实就是把一段所有正的区间和所有负的区间独立开了，有什么用呢？</p>
+<p>其实可以发现，把这段区间归零和$NOIP2013Day2T1$一毛一样，是可以用$O(n)$解的，这里就不说了。</p>
+<p>貌似还有一个问题，就是，如果两个负的区间内夹了一个正数是不是连着这个正数操作最优呢？并不是的，把正数加了还要再减回来，这一次操作用于把另一段负数区间加一，其实是一样的。</p>
+<h3 id="Code-2"><a href="#Code-2" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">#define M 1005</div><div class="line"></div><div class="line">int n,A[M],B[M],C[M];</div><div class="line">int f=0,ans=0;</div><div class="line"></div><div class="line">int calc(int l,int r)&#123;</div><div class="line">	for(int i=l;i&lt;=r;i++)C[i]=abs(C[i]);</div><div class="line">	if(l==r)return C[l];</div><div class="line">	int res=0,mi=0;</div><div class="line">	for(int i=l;i&lt;=r;i++)&#123;</div><div class="line">		if(C[i]&gt;mi)res=res+C[i]-mi,mi=C[i];</div><div class="line">		else mi=C[i];</div><div class="line">	&#125;</div><div class="line">	return res;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	scanf(&quot;%d&quot;,&amp;n);</div><div class="line">	for(int i=1;i&lt;=n;i++)scanf(&quot;%d&quot;,&amp;A[i]);</div><div class="line">	int l;</div><div class="line">	for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">		scanf(&quot;%d&quot;,&amp;B[i]);</div><div class="line">		C[i]=A[i]-B[i];</div><div class="line">		int nf=(C[i]&lt;0)?-1:1;</div><div class="line">		if(f==0)&#123;f=nf,l=1;continue;&#125;</div><div class="line">		if(nf!=f)ans+=calc(l,i-1),l=i,f=-f;</div><div class="line">	&#125;</div><div class="line">	ans=ans+calc(l,n);</div><div class="line">	printf(&quot;%d\n&quot;,ans);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>看了看最后一题不包含在这份题解里面嘞。</p>
+<p>按照$COCI$来分题解的确有点尴尬呢。</p>
+<p>要不下次勤快点整一个目录好了。</p>
+<p>以上</p>
+<p>$ByShy$</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2017/06/06/训练赛/COCI20102011Contest1/">COCI2010/2011 Contest#1</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 Shying 的个人博客">Shying</a></p>
+        <p><span>发布时间:</span>2017年06月06日 - 10时18分</p>
+        <p><span>最后更新:</span>2017年06月06日 - 08时40分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/06/06/训练赛/COCI20102011Contest1/" title="COCI2010/2011 Contest#1">http://yoursite.com/2017/06/06/训练赛/COCI20102011Contest1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/06/06/训练赛/COCI20102011Contest1/　　作者: Shying" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a  href="/2017/06/06/训练赛/COCI20112012Contest3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          COCI2011/2012 Contest#3
+        
+      </div>
+    </a>
+  
+  
+    <a  href="/2017/06/06/训练赛/5.7组队赛/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">APIO#4--5.7组队赛</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TaskC：幸运47"><span class="toc-number">2.</span> <span class="toc-text">TaskC：幸运47</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">2.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析"><span class="toc-number">2.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-number">2.3.</span> <span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TaskD：发糖"><span class="toc-number">3.</span> <span class="toc-text">TaskD：发糖</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意-1"><span class="toc-number">3.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析-1"><span class="toc-number">3.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-1"><span class="toc-number">3.3.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反思"><span class="toc-number">3.4.</span> <span class="toc-text">反思</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TaskE：序列操作"><span class="toc-number">4.</span> <span class="toc-text">TaskE：序列操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意-2"><span class="toc-number">4.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析-2"><span class="toc-number">4.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-2"><span class="toc-number">4.3.</span> <span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">5.</span> <span class="toc-text">后记</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'cysUyjKoQ',
+      conf: 'prod_bc19196c7a2a5953894965521361b2db'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/2017/06/06/训练赛/COCI20112012Contest3/" title="上一篇: COCI2011/2012 Contest#3">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2017/06/06/训练赛/5.7组队赛/" title="下一篇: APIO#4--5.7组队赛">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20142015Contest7/">COCI2014/2015 Contest#7</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20142015Contest5/">COCI2014/2015 Contest#5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20132014Contest6/">COCI2013/2014 Contest#6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20112012Contest5/">COCI2011/2012 Contest#5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20112012Contest3/">COCI2011/2012 Contest#3</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20102011Contest1/">COCI2010/2011 Contest#1</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/5.7组队赛/">APIO#4--5.7组队赛</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/3.11离线赛/">3.11训练赛</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/算法/线段树合并的初次研究/">线段树合并的初次研究</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/模板/AC自动机模板(未完成)/">AC自动机模板(未完成)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/YCJSOI/YCJSOI2577斜率加强版/">YCJSOI2577斜率加强版</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/USACO/2016DEC Platinum/USACO2016DECPlatinumA/">USACO2016DECPlatinum A</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/TopCoder/TopCoderSRM548Div1-450/">TopCoderSRM548Div1 450</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/hello-world/">Hello World</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 Shying
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 4;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80304484-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?7c4f976a8b427a3d92ebe7ccd522b0b9";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+
+<script type="text/javascript"
+color="0,0,0" opacity='0.4' zIndex="-2" count="66" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+  
+</body>
+</html>

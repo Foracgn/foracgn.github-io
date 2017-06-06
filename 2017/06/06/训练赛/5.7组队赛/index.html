@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>APIO#4--5.7组队赛 | Shying&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言怎么说呢，真是一场非常突然的考试啊，没有一点点防备。还是一场组队赛(不过我觉得应该幸亏是组队赛我一个人多半是要死的)，老队友$Spylft$意外挂机，情急之下和$nanhan$组了队，不过$nanhan$也是大佬，虽然过程经历了不少波折，但是结果还是好的，总的来说是被学长和大佬压着，排名第7(其实要不是罚时太高还能上去一点的话说每次组队赛罚时无数是不是我中诅咒了)。">
+<meta name="keywords" content="组队赛 APIO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APIO#4--5.7组队赛">
+<meta property="og:url" content="http://yoursite.com/2017/06/06/训练赛/5.7组队赛/index.html">
+<meta property="og:site_name" content="Shying&#39;s Blog">
+<meta property="og:description" content="前言怎么说呢，真是一场非常突然的考试啊，没有一点点防备。还是一场组队赛(不过我觉得应该幸亏是组队赛我一个人多半是要死的)，老队友$Spylft$意外挂机，情急之下和$nanhan$组了队，不过$nanhan$也是大佬，虽然过程经历了不少波折，但是结果还是好的，总的来说是被学长和大佬压着，排名第7(其实要不是罚时太高还能上去一点的话说每次组队赛罚时无数是不是我中诅咒了)。">
+<meta property="og:updated_time" content="2017-05-09T13:21:02.479Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="APIO#4--5.7组队赛">
+<meta name="twitter:description" content="前言怎么说呢，真是一场非常突然的考试啊，没有一点点防备。还是一场组队赛(不过我觉得应该幸亏是组队赛我一个人多半是要死的)，老队友$Spylft$意外挂机，情急之下和$nanhan$组了队，不过$nanhan$也是大佬，虽然过程经历了不少波折，但是结果还是好的，总的来说是被学长和大佬压着，排名第7(其实要不是罚时太高还能上去一点的话说每次组队赛罚时无数是不是我中诅咒了)。">
+  
+    <link rel="alternative" href="/atom.xml" title="Shying&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/uploads/kanade.ico">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/uploads/kanade.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Shying</a></h1>
+        </hgroup>
+        
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/AC自动机-模板/" style="font-size: 10px;">AC自动机 模板</a> <a href="/tags/DP-背包/" style="font-size: 10px;">DP 背包</a> <a href="/tags/math/" style="font-size: 10px;">math</a> <a href="/tags/在线赛-COCI/" style="font-size: 20px;">在线赛 COCI</a> <a href="/tags/斜率优化-CDQ分治/" style="font-size: 10px;">斜率优化 CDQ分治</a> <a href="/tags/线段树合并/" style="font-size: 10px;">线段树合并</a> <a href="/tags/组队赛-APIO/" style="font-size: 10px;">组队赛 APIO</a>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">懒</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Shying</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/uploads/kanade.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Shying</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-训练赛/5.7组队赛" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/06/06/训练赛/5.7组队赛/" class="article-date">
+      <time datetime="2017-06-06T02:18:16.009Z" itemprop="datePublished">2017-06-06</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      APIO#4--5.7组队赛
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/组队赛-APIO/">组队赛 APIO</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>怎么说呢，真是一场非常突然的考试啊，没有一点点防备。还是一场组队赛(不过我觉得应该幸亏是组队赛我一个人多半是要死的)，老队友$Spylft$意外挂机，情急之下和$nanhan$组了队，不过$nanhan$也是大佬，虽然过程经历了不少波折，但是结果还是好的，总的来说是被学长和大佬压着，排名第7(其实要不是罚时太高还能上去一点的话说每次组队赛罚时无数是不是我中诅咒了)。</p>
+<a id="more"></a>
+<h2 id="Task-A"><a href="#Task-A" class="headerlink" title="Task A"></a>Task A</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给出$n$个元素$A_i$，以及$k$和$x$，每一次将$n$个元素按照大小排序，对于第奇数个元素我们将它的权值异或$x$，$k$次操作后，输出其最大的元素和最小的元素。</p>
+<p>$1&lt;=n&lt;=10^5,0&lt;=k&lt;=10^5,0&lt;=x,A_i&lt;=1000$.</p>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>不难发现每个元素权值不大，因此采取计数排序，每次操作复杂度$O(x)$，总共$k$次操作复杂度总共$O(x*k)$，所以暴力可过。</p>
+<p>但是这里有个细节需要注意，就是$x$的实际范围是$[0,1023]$，因为$512\ xor\ 511=1025$.</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line">#include &lt;bits/stdc++.h&gt;</div><div class="line">using namespace std;</div><div class="line">#define M 100005</div><div class="line">#define mem(a,b) memset(a,b,sizeof(a));</div><div class="line">#define ll long long</div><div class="line">#define db double</div><div class="line">#define oo 1e9</div><div class="line">void Rd(int &amp;x)&#123;</div><div class="line">	x=0;</div><div class="line">	char c;</div><div class="line">	int f=1;</div><div class="line">	while(c=getchar(),!isdigit(c));</div><div class="line">	if(c==&apos;-&apos;)f=-1,c=getchar();</div><div class="line">	do x=(x&lt;&lt;3)+(x&lt;&lt;1)+(c^48);</div><div class="line">	while(c=getchar(),isdigit(c));</div><div class="line">	x*=f;</div><div class="line">&#125;</div><div class="line">int n,k,x;</div><div class="line">int mi=oo,mx;</div><div class="line">int C[2][1050];</div><div class="line">int main()&#123;</div><div class="line">	scanf(&quot;%d %d %d&quot;,&amp;n,&amp;k,&amp;x);</div><div class="line">	for(int i=1,a;i&lt;=n;i++)&#123;</div><div class="line">		scanf(&quot;%d&quot;,&amp;a);</div><div class="line">		C[0][a]++;</div><div class="line">		mi=min(mi,a);</div><div class="line">		mx=max(mx,a);</div><div class="line">	&#125;</div><div class="line">	int nw=0;</div><div class="line">	for(int i=1;i&lt;=k;i++)&#123;</div><div class="line">		int cnt=0;</div><div class="line">		for(int j=0;j&lt;=1024;j++)&#123;</div><div class="line">			if(C[nw][j]==0)continue;</div><div class="line">			int to=(j^x),c=C[nw][j];</div><div class="line">			if(cnt%2==0)&#123;</div><div class="line">				C[!nw][to]+=(c+1)/2;</div><div class="line">				C[!nw][j]+=c/2;</div><div class="line">			&#125;</div><div class="line">			else&#123;</div><div class="line">				C[!nw][to]+=c/2;</div><div class="line">				C[!nw][j]+=(c+1)/2;</div><div class="line">			&#125;</div><div class="line">			cnt+=c;</div><div class="line">			C[nw][j]=0;</div><div class="line">		&#125;</div><div class="line">		nw=!nw;</div><div class="line">	&#125;</div><div class="line">	for(int i=0;i&lt;=1024;i++)&#123;</div><div class="line">		if(C[nw][i])&#123;</div><div class="line">			mi=i;</div><div class="line">			break;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	for(int i=1024;i&gt;=0;i--)&#123;</div><div class="line">		if(C[nw][i])&#123;</div><div class="line">			mx=i;</div><div class="line">			break;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	printf(&quot;%d %d\n&quot;,mx,mi);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Task-B"><a href="#Task-B" class="headerlink" title="Task B"></a>Task B</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>有$n$个需要的龙晶，每一天每个龙晶随机出现，其概率相同的(均为$\frac{1}{n}$)。</p>
+<p>给出$q$，表示有$q$次询问，对于每次询问给出$p_i$，求出拿到所有龙晶概率大于等于$\frac{p_i}{2000}$的最小天数。</p>
+<h3 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h3><p>从理论上来说应该是不怎么难的概率$DP$，但是考试总是玄学的，而且我一看到概率的题目就懵逼了啊。</p>
+<p>唯一的结论就是，所有的龙晶没有区别。</p>
+<p>直接给出转移方程和状态定义：</p>
+<p>$dp[day][i]$表示此时天数一共拿到$i$个龙晶(因为龙晶没有区别)的概率。</p>
+<p>然后进行一点点的分类讨论：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">if(i==0)dp[day][i]=1.0*dp[day-1][i]*i/n;</div><div class="line">else dp[day][i]=1.0*dp[day-1][i]*i/n+1.0*dp[day-1][i-1]*(n-(i-1))/n;</div></pre></td></tr></table></figure></p>
+<p>当$dp[day][n]&gt;=\frac{p_i}{2000}$时那么$day$就是这个$p[i]$的答案。</p>
+<p>因此，这道题也就有了很多的处理方法。第一种，发现答案满足单调结构，那么可以预处理所有的$dp[day][n]$然后二分找到答案，这里上界并不大，只有7000左右。第二种…发现$p_i$的范围不大，所以打表。第三种，为了防止超时，把所有询问排序，一遍就好了。</p>
+<h3 id="Code-1"><a href="#Code-1" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">#include &lt;bits/stdc++.h&gt;</div><div class="line">using namespace std;</div><div class="line">#define M 1005</div><div class="line">#define db double</div><div class="line">db dp[2][M];</div><div class="line">int ans[M];</div><div class="line">int n,q;</div><div class="line">struct node&#123;</div><div class="line">	int w,id;</div><div class="line">&#125;a[M];</div><div class="line">bool cmp(node a,node b)&#123;</div><div class="line">	return a.w&lt;b.w;</div><div class="line">&#125;</div><div class="line">int main()&#123;</div><div class="line">	scanf(&quot;%d %d&quot;,&amp;n,&amp;q);</div><div class="line">	for(int i=1;i&lt;=q;i++)&#123;</div><div class="line">		scanf(&quot;%d&quot;,&amp;a[i].w);</div><div class="line">		a[i].id=i;</div><div class="line">	&#125;</div><div class="line">	sort(a+1,a+q+1,cmp);</div><div class="line">	int i=1;</div><div class="line">	dp[0][0]=1;</div><div class="line">	int nw=0,t=1;</div><div class="line">	while(i&lt;=q)&#123;</div><div class="line">		nw=!nw;</div><div class="line">		for(int j=0;j&lt;=n;j++)&#123;</div><div class="line">			if(j==0)dp[nw][j]=1.0*dp[!nw][j]*j/n;</div><div class="line">			else dp[nw][j]=1.0*dp[!nw][j]*j/n+1.0*dp[!nw][j-1]*(n-(j-1))/n;</div><div class="line">		&#125;</div><div class="line">		while(i&lt;=q&amp;&amp;dp[nw][n]&gt;=1.0*a[i].w/2000)ans[a[i].id]=t,i++;</div><div class="line">		t++;</div><div class="line">	&#125;</div><div class="line">	for(int i=1;i&lt;=q;i++)printf(&quot;%d\n&quot;,ans[i]);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Task-C"><a href="#Task-C" class="headerlink" title="Task C"></a>Task C</h2><h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>给出$n$堆石子，每堆石子都有$A_i$个石子。</p>
+<p>每一次可以拿走一堆石子任意多个石子，但是这一堆中已经取过的石子数不能再取，也就是说，如果第一堆中取过1个石子了，不能再在第一堆取一次1个石子，但是第二堆却可以。</p>
+<p>两个人在玩这个游戏，无法操作的人就算输。</p>
+<p>假使每个人都按照最优策略来玩，问后手能否获胜。</p>
+<p>$1&lt;=n&lt;=10^6,1&lt;=A_i&lt;=60$.</p>
+<h3 id="解析-2"><a href="#解析-2" class="headerlink" title="解析"></a>解析</h3><p>很明显是一个要用$SG$的博弈游戏，所以考虑怎么求$SG$了。</p>
+<p>求$SG$值通常是用$dp$的，但是可以发现这道题的状态非常多，因为这里已经用过的步数是个非常玄学的东西，主要的问题就是存不下了。</p>
+<p>一开始我觉得$dp$是写不出这道题的，所以就爆搜去了，我发现把所有$SG$值搜出来需要差不多三分钟。当然这并没能阻止我，机智的$Get$了需要的$SG$并不多之后我就选择打表了……</p>
+<p>不过解决的办法还是有的，就是用$map+pair$来储存状态，用二进制来压位可用的步数。记忆化之后速度比爆搜快了大概十倍左右，可还是不够，所以还需要继续优化。</p>
+<p>其实在爆搜前就能发现递归的层数并不会很多(否则也不会爆搜了)，那么到了后来只剩几个石子的时候就可以想到有些步数虽然还没走过，但因为石子的个数问题这些步数并没有用。去除这些步数之后(二进制去除)之后，我们就可以把许许多多的状态统一，就减少了很多的复杂度，时间大概就快了十倍，而且还是本地的速度，在$Codeforces$上提交加上输入也只用了$500MS+$，反正$AC$是够了。</p>
+<p>时间历程:$280S-&gt;25S-&gt;2.4S$.</p>
+<h3 id="Code-2"><a href="#Code-2" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">#include &lt;map&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">map&lt;pair&lt;int,long long&gt;,int&gt;Mp;</div><div class="line"></div><div class="line">#define M 61</div><div class="line">int Sg[M];</div><div class="line">long long Pow[M];</div><div class="line"></div><div class="line">int DFS(int x,long long p,int up=M)&#123;</div><div class="line">	for(int i=x;i&lt;up;i++)</div><div class="line">		if((Pow[i]&amp;p))p^=Pow[i];</div><div class="line">	pair&lt;long long,int&gt;pp=make_pair(x,p);</div><div class="line">	if(Mp.count(pp))return Mp[pp];</div><div class="line">	bool hash[M]=&#123;false&#125;;</div><div class="line">	for(int i=0;i&lt;x;i++)</div><div class="line">		if((p&amp;Pow[i]))hash[DFS(x-i-1,p-Pow[i],x)]=true;</div><div class="line">	for(int i=0;i&lt;=x;i++)&#123;</div><div class="line">		if(hash[i]==true)continue;</div><div class="line">		return Mp[pp]=i;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">void Init()&#123;</div><div class="line">	for(int i=0;i&lt;M;i++)Pow[i]=1LL&lt;&lt;i;</div><div class="line">	Mp[make_pair(0,0LL)]=0;</div><div class="line">	for(int i=1;i&lt;M;i++)</div><div class="line">		Sg[i]=DFS(i,(1LL&lt;&lt;i)-1LL);</div><div class="line">&#125;</div><div class="line"></div><div class="line">int n;</div><div class="line">int ans;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	Init();</div><div class="line">	scanf(&quot;%d&quot;,&amp;n);</div><div class="line">	for(int i=1,x;i&lt;=n;i++)scanf(&quot;%d&quot;,&amp;x),ans^=Sg[x];</div><div class="line">	if(ans==0)puts(&quot;YES&quot;);</div><div class="line">	else puts(&quot;NO&quot;);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Code-打表"><a href="#Code-打表" class="headerlink" title="Code(打表)"></a>Code(打表)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">#define M 65</div><div class="line"></div><div class="line">bool mark[M];</div><div class="line">int sg[]=&#123;0,1,1,2,2,2,3,3,3,3,4,4,4,4,4,5,5,5,5,5,5,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8,9,9,9,9,9,9,9,9,9,9,10,10,10,10,10,10&#125;;</div><div class="line">int DFS(int x)&#123;</div><div class="line">	if(x==0)return 0;</div><div class="line">	int res=0;</div><div class="line">	bool hash[M];</div><div class="line">	memset(hash,0,sizeof(hash));</div><div class="line">	for(int i=1;i&lt;=x;i++)&#123;</div><div class="line">		if(mark[i]==true)continue;</div><div class="line">		mark[i]=true;</div><div class="line">		hash[DFS(x-i)]=true;</div><div class="line">		mark[i]=false;</div><div class="line">	&#125;</div><div class="line">	for(int i=0;i&lt;=x;i++)</div><div class="line">		if(hash[i]==false)return i;</div><div class="line">	return res;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int n;</div><div class="line">int ans;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	scanf(&quot;%d&quot;,&amp;n);</div><div class="line">	for(int i=1,x;i&lt;=n;i++)&#123;</div><div class="line">		scanf(&quot;%d&quot;,&amp;x);</div><div class="line">		ans^=sg[x];</div><div class="line">	&#125;</div><div class="line">	if(ans==0)puts(&quot;YES&quot;);</div><div class="line">	else puts(&quot;NO&quot;);</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Task-D"><a href="#Task-D" class="headerlink" title="Task D"></a>Task D</h2><h3 id="题意-3"><a href="#题意-3" class="headerlink" title="题意"></a>题意</h3><p>给出$w$个桶，$f$个箱子，以及参数$h$。</p>
+<p>要求把桶和箱子排成一排，连续的桶或箱子我们称之为一堆，一堆桶或箱子的高度定义为这一堆桶或箱子的个数。</p>
+<p>如果所有堆的桶高度都比$h$大，那么我们把这种排列方式称为好的排列方式。</p>
+<p>输出所有好的排列方式除以所有排列方式对$1e9+7$取模的值$(p*q^{-1} Mod 10^9+7)$。</p>
+<p>$0&lt;=w,f,h&lt;=10^5$</p>
+<h3 id="解析-3"><a href="#解析-3" class="headerlink" title="解析"></a>解析</h3><p>枚举箱子的堆数$i$，那么桶的堆数则为$j$，满足$|i-j|&lt;=1$。</p>
+<p>通过组合数可以知道箱子的排列方式有$C(f-1,i-1)$种。然后考虑桶的排列，可以知道桶一共有$C(w-1,j-1)$种排列，而合法也就是好的排列有$C(w-j*h-1,j-1)$种。</p>
+<p>而且通过研究数据可以发现，当时，合法情况和总情况都会多一倍出来。</p>
+<p>也就是说：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">p=p+C(f-1,i-1)*C(w-j*h-1,j-1)*(1+(i==j));</div><div class="line">q=q+C(f-1,i-1)*C(w-1,j-1)*(1+(i==j));</div></pre></td></tr></table></figure>
+<p>大部分的数据我们都可以用以上方法计算$p,q$来$AC$，但是这道题最玄学的就是它有一些非常鬼畜的数据。</p>
+<p>第一种：当$f==0$时，总排列都只有一种情况，如果$w&gt;h$的话直接输出1。</p>
+<p>第二种：当$w==0$时，总排列也只有一种情况，但是，因为连桶都没有了，也就一定是合法的了，同样直接输出1。</p>
+<h3 id="Code-3"><a href="#Code-3" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">#define M 100005</div><div class="line">#define P 1000000007</div><div class="line"></div><div class="line">int F[M],pF[M];</div><div class="line"></div><div class="line">int Fast(int x,int k)&#123;</div><div class="line">	int res=1;</div><div class="line">	while(k)&#123;</div><div class="line">		if(k&amp;1)res=1ll*res*x%P;</div><div class="line">		x=1ll*x*x%P;</div><div class="line">		k&gt;&gt;=1;</div><div class="line">	&#125;</div><div class="line">	return res;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int C(long long n,long long m)&#123;</div><div class="line">	if(n&lt;0||m&lt;0)return 0;</div><div class="line">	if(n&lt;m)return 0;</div><div class="line">	if(n==0||m==0)return 1;</div><div class="line">	return 1ll*F[n]*pF[m]%P*pF[n-m]%P;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int f,w,h;</div><div class="line">int p,q;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	scanf(&quot;%d %d %d&quot;,&amp;f,&amp;w,&amp;h);</div><div class="line">	if((f==0&amp;&amp;w&gt;h)||w==0)&#123;cout&lt;&lt;1&lt;&lt;endl;return 0;&#125;</div><div class="line">	F[0]=pF[0]=1;</div><div class="line">	for(int i=1;i&lt;M;i++)F[i]=1ll*F[i-1]*i%P;</div><div class="line">	for(int i=1;i&lt;M;i++)pF[i]=Fast(F[i],P-2);</div><div class="line">	for(int i=1;i&lt;=f;i++)&#123;</div><div class="line">		int bas=C(f-1,i-1);</div><div class="line">		for(int j=-1;j&lt;=1;j++)&#123;</div><div class="line">			int ww=i+j;</div><div class="line">			if(ww&lt;1||ww&gt;w)continue;</div><div class="line">			int v=bas;</div><div class="line">			if(j==0)v=(v+v)%P;</div><div class="line">			q=(q+1ll*v*C(w-1,ww-1)%P)%P;</div><div class="line">			p=(p+1ll*v*C(w-1ll*ww*h-1,ww-1)%P)%P;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	cout&lt;&lt;1ll*p*Fast(q,P-2)%P&lt;&lt;endl;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="反思-amp-后记"><a href="#反思-amp-后记" class="headerlink" title="反思&amp;后记"></a>反思&amp;后记</h2><p>这场考试出现了不少问题的。</p>
+<p>首先，是有点过于害怕不熟悉的题目或者麻烦的题目了，在看到$B,C$题的时候我都是条件反射的想要交给$nanhan$来解决，但是事实上这两道题并没有很难。</p>
+<p>然后，没有仔细看题目，思考题目也是很严重的，虽然$A$题提交这么多次部分原因是因为$nanhan$读错了题目，但是我同样在敲代码的时候没有考虑好上界的问题，而且一开始我不管怎么样都没读懂$B$题究竟想让我们做什么。</p>
+<p>最重要的还是把握题目想要做什么，信息是怎么定义的。一道题无非就是信息的展开和信息的收束。能够把信息正确的展开就已经完成了一半。</p>
+<p>但是不可否认，我也还是做出了某些很机智的举动的，比如说直接打表$AC$了$C$题。</p>
+<p>这次和$nanhan$组队给了我很不一样的感觉。以前和$Spylft$组队的时候，我基本只能独立$AC$一道题，剩下就只能够和$Spylft$讨论，帮他看看代码之类的。但是和$nanhan$组队就不一样了，我感觉自己发挥了更大的作用，比如说主攻$A$题和$AC$第三题，和$nanhan$讨论第二题的优化之类的。</p>
+<p>总之还是很愉快的。</p>
+<p>以上</p>
+<p>$ByShy$</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2017/06/06/训练赛/5.7组队赛/">APIO#4--5.7组队赛</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 Shying 的个人博客">Shying</a></p>
+        <p><span>发布时间:</span>2017年06月06日 - 10时18分</p>
+        <p><span>最后更新:</span>2017年05月09日 - 21时21分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/06/06/训练赛/5.7组队赛/" title="APIO#4--5.7组队赛">http://yoursite.com/2017/06/06/训练赛/5.7组队赛/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/06/06/训练赛/5.7组队赛/　　作者: Shying" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a  href="/2017/06/06/训练赛/COCI20102011Contest1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          COCI2010/2011 Contest#1
+        
+      </div>
+    </a>
+  
+  
+    <a  href="/2017/06/06/训练赛/3.11离线赛/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">3.11训练赛</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-A"><span class="toc-number">2.</span> <span class="toc-text">Task A</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">2.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析"><span class="toc-number">2.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-number">2.3.</span> <span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-B"><span class="toc-number">3.</span> <span class="toc-text">Task B</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意-1"><span class="toc-number">3.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析-1"><span class="toc-number">3.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-1"><span class="toc-number">3.3.</span> <span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-C"><span class="toc-number">4.</span> <span class="toc-text">Task C</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意-2"><span class="toc-number">4.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析-2"><span class="toc-number">4.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-2"><span class="toc-number">4.3.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-打表"><span class="toc-number">4.4.</span> <span class="toc-text">Code(打表)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Task-D"><span class="toc-number">5.</span> <span class="toc-text">Task D</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意-3"><span class="toc-number">5.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析-3"><span class="toc-number">5.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code-3"><span class="toc-number">5.3.</span> <span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反思-amp-后记"><span class="toc-number">6.</span> <span class="toc-text">反思&后记</span></a></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'cysUyjKoQ',
+      conf: 'prod_bc19196c7a2a5953894965521361b2db'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/2017/06/06/训练赛/COCI20102011Contest1/" title="上一篇: COCI2010/2011 Contest#1">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2017/06/06/训练赛/3.11离线赛/" title="下一篇: 3.11训练赛">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20142015Contest7/">COCI2014/2015 Contest#7</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20142015Contest5/">COCI2014/2015 Contest#5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20132014Contest6/">COCI2013/2014 Contest#6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20112012Contest5/">COCI2011/2012 Contest#5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20112012Contest3/">COCI2011/2012 Contest#3</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20102011Contest1/">COCI2010/2011 Contest#1</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/5.7组队赛/">APIO#4--5.7组队赛</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/3.11离线赛/">3.11训练赛</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/算法/线段树合并的初次研究/">线段树合并的初次研究</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/模板/AC自动机模板(未完成)/">AC自动机模板(未完成)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/YCJSOI/YCJSOI2577斜率加强版/">YCJSOI2577斜率加强版</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/USACO/2016DEC Platinum/USACO2016DECPlatinumA/">USACO2016DECPlatinum A</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/TopCoder/TopCoderSRM548Div1-450/">TopCoderSRM548Div1 450</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/hello-world/">Hello World</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 Shying
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 4;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80304484-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?7c4f976a8b427a3d92ebe7ccd522b0b9";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+
+<script type="text/javascript"
+color="0,0,0" opacity='0.4' zIndex="-2" count="66" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+  
+</body>
+</html>

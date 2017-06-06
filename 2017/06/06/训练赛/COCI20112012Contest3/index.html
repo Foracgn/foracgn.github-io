@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="baidu-site-verification" content="L6Lm9d5Crl"/>
+  
+  
+  
+  
+  <title>COCI2011/2012 Contest#3 | Shying&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="前言这是5.24在线赛的下半部分。">
+<meta name="keywords" content="在线赛 COCI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="COCI2011&#x2F;2012 Contest#3">
+<meta property="og:url" content="http://yoursite.com/2017/06/06/训练赛/COCI20112012Contest3/index.html">
+<meta property="og:site_name" content="Shying&#39;s Blog">
+<meta property="og:description" content="前言这是5.24在线赛的下半部分。">
+<meta property="og:image" content="http://yoursite.com/uploads/20170602205134.png">
+<meta property="og:updated_time" content="2017-06-04T14:33:27.618Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="COCI2011&#x2F;2012 Contest#3">
+<meta name="twitter:description" content="前言这是5.24在线赛的下半部分。">
+<meta name="twitter:image" content="http://yoursite.com/uploads/20170602205134.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Shying&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/uploads/kanade.ico">
+  
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/uploads/kanade.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Shying</a></h1>
+        </hgroup>
+        
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="/archives/">所有文章</a></li>
+                        
+                            <li><a  href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/AC自动机-模板/" style="font-size: 10px;">AC自动机 模板</a> <a href="/tags/DP-背包/" style="font-size: 10px;">DP 背包</a> <a href="/tags/math/" style="font-size: 10px;">math</a> <a href="/tags/在线赛-COCI/" style="font-size: 20px;">在线赛 COCI</a> <a href="/tags/斜率优化-CDQ分治/" style="font-size: 10px;">斜率优化 CDQ分治</a> <a href="/tags/线段树合并/" style="font-size: 10px;">线段树合并</a> <a href="/tags/组队赛-APIO/" style="font-size: 10px;">组队赛 APIO</a>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">懒</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Shying</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/uploads/kanade.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Shying</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-训练赛/COCI20112012Contest3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/06/06/训练赛/COCI20112012Contest3/" class="article-date">
+      <time datetime="2017-06-06T02:18:16.020Z" itemprop="datePublished">2017-06-06</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      COCI2011/2012 Contest#3
+    </h1>
+  
+
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/在线赛-COCI/">在线赛 COCI</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是5.24在线赛的下半部分。</p>
+<a id="more"></a>
+<h2 id="TaskD：机器人的检测"><a href="#TaskD：机器人的检测" class="headerlink" title="TaskD：机器人的检测"></a>TaskD：机器人的检测</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>小C制作了一个新的机器人并决定将它放在巨大的轨道上测试。我们可以将轨道看做一个二维的坐标系。机器人的初始位置为原点（0,0），并会受到一系列由S,J,I,Z构成的操作指示，每一个指示都会引导它移动。</p>
+<p>更确切地说，如果机器人的位置为$(x,y)$，$S(“north”)$表示它会移动到$(x,y+1)$；$J(“south”)$表示它会移动到$(x,y-1)$；$I(“east”)$表示它会移动到$(x+1,y)$；$Z(“west”)$表示它会移动到$(x-1,y)$。</p>
+<p>每当机器人移动一次，小C要确认机器人的位置，来确定机器人是否按规定的路径移动。于是他安装了$N$个控制点，在每一次移动之后，每一个控制点都会计算出该点到机器人的曼哈顿距离，并将所有点的距离之和发给小C。</p>
+<p>操作一共有$M$次。</p>
+<p>假设机器人移动时没有出现错误，计算出每一次移动后所有距离的和。</p>
+<p>$1&lt;=N&lt;=10^5,1&lt;=M&lt;=3*10^5,|x|,|y|&lt;=10^6$</p>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>其实这道题并不难。</p>
+<p>细想之后是不难发现，其实每个点都可以拆成是横坐标和纵坐标，坐标之间没有必然的关系。</p>
+<p>而且，每次操作完之后之间影响的点是很少的，如果改变了横坐标，其与纵坐标之间的关系是不会变的，而横坐标的变化也非常少，就是其横坐标比它小的点距离都加1，比它大的都减1而已。</p>
+<p>因此，每一次操作只需要找出比它坐标小的和大的所有点就好了，$O(logn)$或者$O(1)$都是可以的。</p>
+<p>但是这里有三十万的$longlong$输出，所以不改成输出挂的话$O(logn)$的办法还是很悬的。</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">#include &lt;vector&gt;</div><div class="line">#include &lt;map&gt;</div><div class="line">using namespace std;</div><div class="line"></div><div class="line">#define N 100005</div><div class="line">#define M 300005</div><div class="line"></div><div class="line">int n,m;</div><div class="line">char str[M];</div><div class="line">long long ans=0;</div><div class="line">int Xi[N],Yi[N];</div><div class="line"></div><div class="line">void Print(long long x)&#123;</div><div class="line">	if(x==0)return;</div><div class="line">	Print(x/10);</div><div class="line">	putchar((x%10)^&apos;0&apos;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">void Pf(long long x)&#123;</div><div class="line">	if(x==0)&#123;putchar(&apos;0&apos;);return;&#125;</div><div class="line">	Print(x);</div><div class="line">&#125;</div><div class="line"></div><div class="line">int Qy(int y)&#123;</div><div class="line">	int res=lower_bound(Yi+1,Yi+n+1,y)-Yi-1;</div><div class="line">	return res;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int Qx(int x)&#123;</div><div class="line">	int res=lower_bound(Xi+1,Xi+n+1,x)-Xi-1;</div><div class="line">	return res;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main()&#123;</div><div class="line">	scanf(&quot;%d %d&quot;,&amp;n,&amp;m);</div><div class="line">	for(int i=1,x,y;i&lt;=n;i++)&#123;</div><div class="line">		scanf(&quot;%d %d&quot;,&amp;x,&amp;y);</div><div class="line">		Xi[i]=x,Yi[i]=y;</div><div class="line">		ans+=abs(x)+abs(y);</div><div class="line">	&#125;</div><div class="line">	sort(Xi+1,Xi+n+1);</div><div class="line">	sort(Yi+1,Yi+n+1);</div><div class="line">	scanf(&quot;%s&quot;,str);</div><div class="line">	for(int i=0,nx=0,ny=0;i&lt;m;i++)&#123;</div><div class="line">		if(str[i]==&apos;S&apos;)&#123;ny++;ans=2*Qy(ny)-n+ans;&#125;</div><div class="line">		if(str[i]==&apos;J&apos;)&#123;ans=n-2*Qy(ny)+ans;ny--;&#125;</div><div class="line">		if(str[i]==&apos;I&apos;)&#123;nx++;ans=2*Qx(nx)-n+ans;&#125;</div><div class="line">		if(str[i]==&apos;Z&apos;)&#123;ans=n-2*Qx(nx)+ans;nx--;&#125;</div><div class="line">		Pf(ans);</div><div class="line">		puts(&quot;&quot;);</div><div class="line">	&#125;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="TaskF：汽车流水线"><a href="#TaskF：汽车流水线" class="headerlink" title="TaskF：汽车流水线"></a>TaskF：汽车流水线</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>我们已经知道了小C开设了一个工厂。现在工人们正在流水线上制造汽车。 $N$ 个工人分别用 $1$ 到 $N$ 编号， $1$ 号工人位于流水线最左端， $N$ 号位于最右端。每一个工人都有他特定的工作，并需要一定的时间来完成。</p>
+<p>每一辆汽车从 $1$ 号工人(小C)开始制造，当他完成他的工作后立刻交给 $2$ 号工人制造， $2$ 号工人完成后立刻交给 $3$ 号工人，这样一直到 $N$ 号工人最终完成汽车的制造。制造汽车时必须按照由 $1$ 到 $N$ 的顺序。</p>
+<p>对于第 $i$ 个工人，我们知道他完成他工作所需的时间 $T_i$ 。对于每一辆汽车 $j$ ，知道制造这辆汽车的复杂系数 $F_j$ 。所以工人 $i$ 完成他所负责的汽车 $j$ 的工作所需的总时间为 $T_i \times F_j$ 。</p>
+<p>每当一个工人完成他所负责的工作时，必须立刻交给下一个工人，没有任何时间间隔。也就是说，当工人 $i$ 完成工作时，工人 $i+1$ 必须空闲，没有正在完成的工作。所以小C想要知道最少需要多少时间才可以制造完全部的汽车。</p>
+<p>请帮小C写一个程序，计算出最少所需的时间。</p>
+<p>$1&lt;N,M&lt;=10^5,1&lt;=T_i,F_i&lt;=10^4$</p>
+<h3 id="解析-1"><a href="#解析-1" class="headerlink" title="解析"></a>解析</h3><p>这道题比较厉害，模拟以后，我们可以得到一个结论。</p>
+<p>假设$p_i$是第$i$辆车开始制造的时间，则：<br>$$<br>p_i+\sum{F_i<em>T<em>j}&gt;=p</em>{i-1}+\sum{F_{i-1}</em>T_{j+1}}<br>$$<br>即，这一辆车的每一道工序开始的时间必须前一辆车的下一道工序完成的时间大。</p>
+<p>有了数学公式也就有了转机，我们可以开始化简了。</p>
+<p>首先，$\sum{T_j*F_i}$满足前缀和结构，而且可以把大于等于直接转化为最大值：<br>$$</p>
+<p>$$<br>所有的时间差加起来再加上最后一辆车的制造时间就是最后的答案。</p>
+<p>这里可以采取斜率优化。</p>
+<p>那么我们再来仔细讨论一下斜率优化的具体细节吧。</p>
+<h3 id="斜率优化"><a href="#斜率优化" class="headerlink" title="斜率优化"></a>斜率优化</h3><p>给定很多的点$(x,y)$以及很多的斜率$k$，如何求出每一个$k*x+y$的最大值呢？</p>
+<p>虽然我们可以采取$O(n^2)$的办法求出来。</p>
+<p>如果点比较多，斜率也比较多，我们就必须采取优化。</p>
+<p>观察以下图：</p>
+<p><img src="\uploads\20170602205134.png" alt=""></p>
+<p>容易感觉到$K,H,I,G$几个点貌似是没有用的，而剩下的点，对于一个斜率$k$，貌似是满足三分图线的。</p>
+<p>为什么呢？</p>
+<p>从数的角度来说。</p>
+<p>我们需要令$k<em>x+y$，那么我们把这个值设为$b$，则$y=-k</em>x+b$。当$b$最大的时候$k*x+y$也是最大的。</p>
+<p>也就是说，我们需要让每个斜率$k$，找到能使这条直线截距最大的点$(x,y)$。</p>
+<p>但是，可能有一些点没有用</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a  href="/2017/06/06/训练赛/COCI20112012Contest3/">COCI2011/2012 Contest#3</a></p>
+        <p><span>文章作者:</span><a  href="/" title="访问 Shying 的个人博客">Shying</a></p>
+        <p><span>发布时间:</span>2017年06月06日 - 10时18分</p>
+        <p><span>最后更新:</span>2017年06月04日 - 22时33分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/06/06/训练赛/COCI20112012Contest3/" title="COCI2011/2012 Contest#3">http://yoursite.com/2017/06/06/训练赛/COCI20112012Contest3/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/06/06/训练赛/COCI20112012Contest3/　　作者: Shying" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a  href="/2017/06/06/训练赛/COCI20112012Contest5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          COCI2011/2012 Contest#5
+        
+      </div>
+    </a>
+  
+  
+    <a  href="/2017/06/06/训练赛/COCI20102011Contest1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">COCI2010/2011 Contest#1</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TaskD：机器人的检测"><span class="toc-number">2.</span> <span class="toc-text">TaskD：机器人的检测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意"><span class="toc-number">2.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析"><span class="toc-number">2.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code"><span class="toc-number">2.3.</span> <span class="toc-text">Code</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TaskF：汽车流水线"><span class="toc-number">3.</span> <span class="toc-text">TaskF：汽车流水线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#题意-1"><span class="toc-number">3.1.</span> <span class="toc-text">题意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析-1"><span class="toc-number">3.2.</span> <span class="toc-text">解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#斜率优化"><span class="toc-number">3.3.</span> <span class="toc-text">斜率优化</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'cysUyjKoQ',
+      conf: 'prod_bc19196c7a2a5953894965521361b2db'
+    });
+  </script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a  href="/2017/06/06/训练赛/COCI20112012Contest5/" title="上一篇: COCI2011/2012 Contest#5">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a  href="/2017/06/06/训练赛/COCI20102011Contest1/" title="下一篇: COCI2010/2011 Contest#1">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20142015Contest7/">COCI2014/2015 Contest#7</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20142015Contest5/">COCI2014/2015 Contest#5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20132014Contest6/">COCI2013/2014 Contest#6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20112012Contest5/">COCI2011/2012 Contest#5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20112012Contest3/">COCI2011/2012 Contest#3</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/COCI20102011Contest1/">COCI2010/2011 Contest#1</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/5.7组队赛/">APIO#4--5.7组队赛</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/训练赛/3.11离线赛/">3.11训练赛</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/算法/线段树合并的初次研究/">线段树合并的初次研究</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/模板/AC自动机模板(未完成)/">AC自动机模板(未完成)</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/YCJSOI/YCJSOI2577斜率加强版/">YCJSOI2577斜率加强版</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/USACO/2016DEC Platinum/USACO2016DECPlatinumA/">USACO2016DECPlatinum A</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/TopCoder/TopCoderSRM548Div1-450/">TopCoderSRM548Div1 450</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/06/hello-world/">Hello World</a></li></ul>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
+
+
+
+
+    <script>
+        
+    </script>
+
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 Shying
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a><a href="https://github.com/maochunguang" target="_blank">Blog</a> by tommy
+            </div>
+        </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 4;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-80304484-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?7c4f976a8b427a3d92ebe7ccd522b0b9";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+
+<script type="text/javascript"
+color="0,0,0" opacity='0.4' zIndex="-2" count="66" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+  
+</body>
+</html>
