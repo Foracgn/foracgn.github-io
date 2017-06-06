@@ -1,0 +1,721 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="math," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/kanade.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="题意在平面内有n个点，每三个点不共线。问有多少个三角形包含了$[0,n-3]$个点。$[1,n-2]$行输出包含$[0,n-2]$个点的三角形个数。">
+<meta name="keywords" content="math">
+<meta property="og:type" content="article">
+<meta property="og:title" content="USACO2016DECPlatinum A">
+<meta property="og:url" content="http://yoursite.com/2017/06/06/USACO/USACO2016DECPlatinumA/index.html">
+<meta property="og:site_name" content="Shying&#39;s Blog">
+<meta property="og:description" content="题意在平面内有n个点，每三个点不共线。问有多少个三角形包含了$[0,n-3]$个点。$[1,n-2]$行输出包含$[0,n-2]$个点的三角形个数。">
+<meta property="og:updated_time" content="2017-06-06T02:33:41.327Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="USACO2016DECPlatinum A">
+<meta name="twitter:description" content="题意在平面内有n个点，每三个点不共线。问有多少个三角形包含了$[0,n-3]$个点。$[1,n-2]$行输出包含$[0,n-2]$个点的三角形个数。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/06/USACO/USACO2016DECPlatinumA/"/>
+
+
+
+
+
+  <title> USACO2016DECPlatinum A | Shying's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Shying's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-adr">
+          <a href="http://adarkroom.doublespeakgames.com/?lang=zh_cn" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            小黑屋
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/06/USACO/USACO2016DECPlatinumA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shying">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/kanade.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shying's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                USACO2016DECPlatinum A
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T10:32:56+08:00">
+                2017-06-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>在平面内有n个点，每三个点不共线。<br>问有多少个三角形包含了$[0,n-3]$个点。<br>$[1,n-2]$行输出包含$[0,n-2]$个点的三角形个数。</p>
+<a id="more"></a>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>对于这道题，我们需要把三角形分解，成为三条线段。每条线段的下方会有不知道多少个点，我们首先算出每个线段下方的点数。</p>
+<p>那么三个线段构成的图就是如下所示：</p>
+<p>卖土地1或者卖土地2</p>
+<p>这样两种情况。容易发现我们可以用三条线段下方的点数来计算出三角形内部的点，但是这两种情况的计算方法并不一样。</p>
+<p>那么我们现在需要怎么样的函数呢？</p>
+<p>1、判定一个点是否是在一条线段的下方。</p>
+<p>2、判断三角形是第一种情况还是第二种情况。</p>
+<p>我们我可以用三角形相似的原理去写第一个函数。</p>
+<p>第一条函数（判定点a是否在线段bc下方）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">bool check(Poi a,Poi b,Poi c)&#123;</div><div class="line">        int mxx=max(a.x,b.x),mix=min(a.x,b.x);</div><div class="line">        if(c.x&gt;mxx||c.x&lt;mix)return false;</div><div class="line">        int dy=b.y-a.y,dx=b.x-a.x;</div><div class="line">        double py=1.0*(1.0*(c.x-a.x)/dx)*dy+1.0*a.y;</div><div class="line">        return py&gt;c.y;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>同时如果把这条函数增加更改一点的话是可以用于判断三角形的，只需要把a,b,c三个点交换顺序都$check$并把$return$改改就好。</p>
+<p>然后我们开始计算，计算的话讨论以上两种情况，即中间的点是在线段的上方还是下方。</p>
+<p>计算（伪）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">void calc(int f,int &amp;v,int a,int b,int c)&#123;</div><div class="line">        if(f==1)v=c-a-b-1;</div><div class="line">        if(f==0)v=a+b-c;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>f表示中间的点是否在下方。c表示中间的点所对的边下方的点数。</p>
+<p>但是以上的代码并不是正确的：中间的点正下方点是会被重复计算或者是漏算的，所以我们需要再把这部分误差排除。可以预处理每个点正下方的点有多少个。</p>
+<p>复杂度$O(n^3)$，并不难过。</p>
+<h3 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">#include &lt;iostream&gt;</div><div class="line">#include &lt;algorithm&gt;</div><div class="line">#include &lt;map&gt;</div><div class="line">#define M 305</div><div class="line">using namespace std;</div><div class="line">int dp[M][M];</div><div class="line">struct Poi&#123;</div><div class="line">	int x,y;</div><div class="line">&#125;A[M];</div><div class="line">int n;</div><div class="line">int C[M];</div><div class="line">int ans[M];</div><div class="line">int check(Poi a,Poi b,Poi c)&#123;</div><div class="line">	int mxx=max(a.x,b.x),mix=min(a.x,b.x);</div><div class="line">	if(c.x&gt;mxx||c.x&lt;mix)return -1;</div><div class="line">	int dy=b.y-a.y,dx=b.x-a.x;</div><div class="line">	double py=1.0*(1.0*(c.x-a.x)/dx)*dy+1.0*a.y;</div><div class="line">	return py&gt;c.y;</div><div class="line">&#125;</div><div class="line">void calc(int f,int &amp;v,int a,int b,int c,int z)&#123;</div><div class="line">	if(f==1)v=c-a-b-1+C[z];</div><div class="line">	if(f==0)v=a+b-c-C[z];</div><div class="line">&#125;</div><div class="line">int main()&#123;</div><div class="line">//	freopen(&quot;triangles.in&quot;,&quot;r&quot;,stdin);</div><div class="line">//	freopen(&quot;triangles.out&quot;,&quot;w&quot;,stdout);</div><div class="line">	scanf(&quot;%d&quot;,&amp;n);</div><div class="line">	for(int i=1;i&lt;=n;i++)</div><div class="line">		scanf(&quot;%d %d&quot;,&amp;A[i].x,&amp;A[i].y);</div><div class="line">	for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">		for(int j=1;j&lt;=n;j++)&#123;</div><div class="line">			if(i==j)continue;</div><div class="line">			if(A[i].x==A[j].x&amp;&amp;A[i].y&gt;A[j].y)C[i]++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">		for(int j=i+1;j&lt;=n;j++)&#123;</div><div class="line">			int c=0;</div><div class="line">			Poi a=A[i],b=A[j];</div><div class="line">			if(a.x&gt;b.x)swap(a,b);</div><div class="line">			for(int t=1;t&lt;=n;t++)&#123;</div><div class="line">				if(i==t||j==t)continue;</div><div class="line">				if(check(a,b,A[t])==1)c++;</div><div class="line">			&#125;</div><div class="line">			dp[i][j]=c;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	for(int i=1;i&lt;=n;i++)&#123;</div><div class="line">		for(int j=i+1;j&lt;=n;j++)&#123;</div><div class="line">			for(int t=j+1;t&lt;=n;t++)&#123;</div><div class="line">				int a=dp[i][j],b=dp[j][t],c=dp[i][t],res=M;</div><div class="line">				int cha=check(A[i],A[j],A[t]);</div><div class="line">				int chb=check(A[j],A[t],A[i]);</div><div class="line">				int chc=check(A[i],A[t],A[j]);</div><div class="line">				calc(cha,res,b,c,a,t);</div><div class="line">				calc(chb,res,a,c,b,i);</div><div class="line">				calc(chc,res,a,b,c,j);</div><div class="line">				ans[res]++;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	for(int i=0;i&lt;=n-3;i++)cout&lt;&lt;ans[i]&lt;&lt;endl;</div><div class="line">	return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上</p>
+<p>$By Shy$</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/math/" rel="tag"># math</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/06/训练赛/COCI20142015Contest7/" rel="next" title="COCI2014/2015 Contest#7">
+                <i class="fa fa-chevron-left"></i> COCI2014/2015 Contest#7
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/kanade.jpg"
+               alt="Shying" />
+          <p class="site-author-name" itemprop="name">Shying</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=632891057&auto=0&height=430"></iframe>
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解题思路"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code"><span class="nav-number">3.</span> <span class="nav-text">Code</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shying</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+  
+
+
+  
+
+</body>
+</html>
+
+<script type="text/javascript" src="/js/src/particle.js" count="50" zindex="-2" opacity="1" color="0,104,183"></script>
